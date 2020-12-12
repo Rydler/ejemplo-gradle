@@ -35,3 +35,13 @@
 
 ### Testing Application
 * curl -X GET 'http://localhost:8081/rest/mscovid/test?msg=testing'
+
+
+### Compile, test, jar
+gradle clean build
+
+### Run: 
+gradle bootRun
+
+### Test: 
+curl -X GET 'http://localhost:8081/rest/mscovid/test?msg=testing'
