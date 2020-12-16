@@ -22,7 +22,7 @@ pipeline {
                         sh 'curl -X GET http://localhost:8082/rest/mscovid/test?msg=testing'
                     }
                     stage('Nexus'){
-                      //  nexusPublisher nexusInstanceId: 'Nexus_server_ubuntu', nexusRepositoryId: 'test-repo', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: 'jar', filePath: '/Users/dmorales/Documents/diplomadodevops2020/ejemplo-maven/build/DevOpsUsach2020-0.0.1.jar']], mavenCoordinate: [artifactId: 'DevOpsUsach2020', groupId: 'com.devopsusach2020', packaging: 'jar', version: '0.0.1']]]
+                        nexusPublisher nexusInstanceId: 'Nexus_server_ubuntu', nexusRepositoryId: 'test-repo', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: 'jar', filePath: '/build/DevOpsUsach2020-0.0.1.jar']], mavenCoordinate: [artifactId: 'DevOpsUsach2020', groupId: 'com.devopsusach2020', packaging: 'jar', version: '0.0.1']]]
                     }
                 }
             }
