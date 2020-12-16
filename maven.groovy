@@ -4,7 +4,6 @@ ejecucion.call()
 */
 
 def call(){
-    stages {
         stage('Compile') {
             steps {
                 sh './mvnw clean compile -e'
