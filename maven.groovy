@@ -17,9 +17,10 @@ def call(){
         sh './mvnw clean package -e'
     }
 
-    stage('Sonar') {
-        withSonarQubeEnv('Sonar') { // You can override the credential to be used
-            sh './mvnw org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+    stage('Sonar'){
+        def scannerHome = tool 'sonar';
+        withSonarQubeEnv('sonar') { // If you have configured more than one global server connection, you can specify its name
+            sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ejemplo-gradle -Dsonar.java.binaries=build"
         }
     }
 
