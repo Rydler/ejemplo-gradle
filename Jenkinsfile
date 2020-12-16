@@ -3,21 +3,23 @@ pipeline {
 
     stages {
         stage('Pipeline') {
-            script{
-                stage('Build & Test'){
+            steps{
+                script{
+                    stage('Build & Test'){
 
-                }
-                stage('Sonar'){
+                    }
+                    stage('Sonar'){
 
-                }
-                stage('Run'){
+                    }
+                    stage('Run'){
 
-                }
-                stage('Test'){
+                    }
+                    stage('Test'){
 
-                }
-                stage('Nexus'){
+                    }
+                    stage('Nexus'){
 
+                    }
                 }
             }
         }
