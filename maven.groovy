@@ -1,6 +1,7 @@
-//forma de invocación de método call:
+/*forma de invocación de método call:
 def ejecucion = load 'maven.groovy'
 ejecucion.call()
+*/
 
 def call(){
     stage('Build & Test'){

@@ -1,8 +1,8 @@
 
-//forma de invocación de método call:
+/*forma de invocación de método call:
 def ejecucion = load 'gradle.groovy'
 ejecucion.call()
-
+*/
 def call(){
     stage('Build & Test'){
         sh './gradlew clean build'
