@@ -27,7 +27,7 @@ pipeline {
             slackSend channel: 'U01DRJVPRTK', color: 'good', message: 'Build Failure: [${user}][${env.JOB_NAME}]' + params.CHOICES + 'Ejecución fallida en stage ${env.STAGE_NAME}', teamDomain: 'dipdevopsusach2020', tokenCredentialId: 'Slack_integration'
         }
         success {
-            slackSend channel: 'U01DRJVPRTK', color: 'good', message: 'Build Success: [${user}][${env.JOB_NAME}]' + params.CHOICES + 'Ejecución exitosa.', teamDomain: 'dipdevopsusach2020', tokenCredentialId: 'Slack_integration'
+            slackSend channel: 'U01DRJVPRTK', color: 'good', message: "Build Success: [${user}][${env.JOB_NAME}]" + params.CHOICES + 'Ejecución exitosa.', teamDomain: 'dipdevopsusach2020', tokenCredentialId: 'Slack_integration'
          
         }
     }
