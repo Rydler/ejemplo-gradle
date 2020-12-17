@@ -1,12 +1,14 @@
+node {
+    wrap([$class: 'BuildUser']) {
+        def user = env.BUILD_USER
+    }
+}
+
 pipeline {
     agent any
     parameters { choice(name: 'CHOICES', choices: ['gradle', 'maven'], description: 'Invocacion ') }
 
-    node {
-        wrap([$class: 'BuildUser']) {
-            def user = env.BUILD_USER
-        }
-    }
+    
 
     stages {
         stage('Pipeline') {
